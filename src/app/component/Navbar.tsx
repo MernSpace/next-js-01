@@ -12,7 +12,7 @@ function Navbar({ className }: { className?: string }) {
             className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
         >
 
-           <div className='flex items-center justify-center'>
+           <div className='flex items-center justify-center' style={{backgroundColor:'#000',borderRadius:'30px'}}>
                <Menu setActive={setActive}>
                    <MenuItem setActive={setActive} active={active} item="Home">
                    </MenuItem>

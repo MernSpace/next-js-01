@@ -28,7 +28,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
       >
         {item}
       </motion.p>
@@ -68,31 +68,31 @@ export const Menu = ({
   children: React.ReactNode;
 }) => {
   return (
-    <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
-    >
-      {children}
-    </nav>
+        <nav
+            onMouseLeave={() => setActive(null)} // resets the state
+            className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] text-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+        >
+          {children}
+        </nav>
   );
 };
 
 export const ProductItem = ({
-  title,
-  description,
-  href,
-  src,
-}: {
+                              title,
+                              description,
+                              href,
+                              src,
+                            }: {
   title: string;
   description: string;
   href: string;
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
-      <Image
-        src={src}
-        width={140}
+      <Link href={href} className="flex space-x-2">
+        <Image
+            src={src}
+            width={140}
         height={70}
         alt={title}
         className="shrink-0 rounded-md shadow-2xl"
